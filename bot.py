@@ -1,4 +1,4 @@
-l# bot.py
+# bot.py
 import os
 from pymongo import MongoClient
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, InputFile
