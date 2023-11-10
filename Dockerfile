@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt /app/
 
 # Install any needed packages specified in requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the container at /app
 COPY . /app/
@@ -17,4 +17,4 @@ COPY . /app/
 ENV PYTHONUNBUFFERED 1
 
 # Command to run on container start
-CMD ["python3", "bot.py"]
+CMD ["python", "bot.py"]
