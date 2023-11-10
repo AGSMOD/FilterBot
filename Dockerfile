@@ -1,20 +1,13 @@
-# Use the official Python image as the base image
-FROM python:3.8
+FROM python:3.8-slim-buster
 
-# Set the working directory in the container
-WORKDIR /app
+RUN apt update && apt upgrade -y
+RUN apt install git -y
+COPY requirements.txt /requirements.txt
 
-# Copy the requirements file into the container at /app
-COPY requirements.txt /app/
+RUN cd /
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+WORKDIR /Filter-Bot
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
 
-# Copy the rest of the application code into the container at /app
-COPY . /app/
-
-# Define environment variable for Python to run in unbuffered mode
-ENV PYTHONUNBUFFERED 1
-
-# Command to run on container start
-CMD ["python", "bot.py"]
+CMD ["python3", "main.py"]

@@ -1,41 +1,64 @@
 {
-  "name": "FilterBot",
-  "description": "A simple Telegram bot deployed on Render",
-  "github": "https://github.com/AGSMOD/FilterBot",
-  "env": {
-    "BOT_TOKEN": {
-      "description": "Telegram Bot Token",
-      "required": true
+    "name": "FILTER BOT",
+    "description": "An unlimited filter bot using Mongo DB",
+    "logo": "https://telegra.ph/file/71aaa621508cd696ab538.jpg",
+    "keywords": [
+        "Filter"
+        "Telegram Bot",
+        "AgsMods"
+    ],
+    "repository": "https://github.com/AGSMOD/FilterBot",
+    
+    "env": {
+        "WEBHOOK": {
+            "description": "No need to change this field!",
+            "value": "ANYTHING"
+        },
+        "BOT_TOKEN": {
+            "description": "Your Telegram Bot Token from @BotFather",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Your API Hash from my.telegram.org or @UseTGXBot",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Your APP ID from my.telegram.org or @UseTGXBot",
+            "value": ""
+        },
+        "AUTH_USERS": {
+            "description": "ID of users that can use the bot commands",
+            "value": ""
+        },
+        "DATABASE_URI": {
+            "description": "Database URL from https://cloud.mongodb.com/",
+            "value": ""
+        },
+        "DATABASE_NAME": {
+            "description": "Your database name from mongoDB. ( Default will 'Cluster0' )",
+            "value": "Cluster0",
+            "required": false
+        },
+        "SAVE_USER": {
+            "description": "Do you need to save user details? Usefull for getting userinfo and total user counts. May reduce filter capacity. Give yes or no",
+            "value": "no",
+            "required": false
+        },
+        "HEROKU_API_KEY": {
+            "description": "To check dyno status. Go to https://dashboard.heroku.com/account, scroll down and press Reveal API",
+            "value": "None",
+            "required": false
+        }
     },
-    "MONGO_URI": {
-      "description": "MongoDB URI",
-      "required": true
-    },
-    "MONGO_NAME": {
-      "description": "MongoDB Database Name",
-      "required": true
-    },
-    "API_ID": {
-      "description": "Telegram API ID",
-      "required": true
-    },
-    "API_HASH": {
-      "description": "Telegram API Hash",
-      "required": true
-    },
-    "FORCE_SUBSCRIBE": {
-      "description": "Force users to subscribe (true/false)",
-      "required": false
-    },
-    "LOG_CHANNEL": {
-      "description": "Log channel ID",
-      "required": false
-    },
-    "BOT_PIC": {
-      "description": "Path to the bot's profile picture",
-      "required": false
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
     }
-  },
-  "buildCommand": "pip install -r requirements.txt",
-  "startCommand": "python3 bot.py"
 }
