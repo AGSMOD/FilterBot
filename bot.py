@@ -15,9 +15,7 @@ LOG_CHANNEL = os.environ.get('LOG_CHANNEL', '-1002091999754')
 BOT_PIC = os.environ.get('BOT_PIC', 'https://telegra.ph/file/5254eb3ce91431dd02554.jpg')
 
 # Connect to MongoDB
-client = MongoClient(MONGO_URI)
-db = client.get_database()
-users_collection = db.users
+db = Database(MONGO_URI, MONGO_NAME)
 
 def is_subscribed(user_id):
     user_data = users_collection.find_one({'user_id': user_id})
