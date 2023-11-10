@@ -1,0 +1,41 @@
+{
+  "name": "FilterBot",
+  "description": "A simple Telegram bot deployed on Render",
+  "github": "https://github.com/AGSMOD/FilterBot",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Telegram Bot Token",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "MongoDB URI",
+      "required": true
+    },
+    "MONGO_NAME": {
+      "description": "MongoDB Database Name",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegram API Hash",
+      "required": true
+    },
+    "FORCE_SUBSCRIBE": {
+      "description": "Force users to subscribe (true/false)",
+      "required": false
+    },
+    "LOG_CHANNEL": {
+      "description": "Log channel ID",
+      "required": false
+    },
+    "BOT_PIC": {
+      "description": "Path to the bot's profile picture",
+      "required": false
+    }
+  },
+  "buildCommand": "pip install -r requirements.txt",
+  "startCommand": "python3 bot.py"
+}
