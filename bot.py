@@ -10,7 +10,7 @@ MONGO_URI = os.environ.get('MONGO_URI','mongodb+srv://Gali:Galk@cluster0.qm9j1ag
 MONGO_NAME = os.environ.get('MONGO_NAME', 'cluster0')
 API_ID = int(os.environ.get('API_ID','20919286'))
 API_HASH = os.environ.get('API_HASH','57b85f72104db3f08f9795b0410eb556')
-FORCE_SUBSCRIBE = os.environ.get('FORCE_SUBSCRIBE','-1001955533061', True)  # Default to False if not set
+FORCE_SUBSCRIBE = os.environ.get('FORCE_SUBSCRIBE',False)  # Default to False if not set
 LOG_CHANNEL = os.environ.get('LOG_CHANNEL', '-1002091999754')
 BOT_PIC = os.environ.get('BOT_PIC', 'https://telegra.ph/file/5254eb3ce91431dd02554.jpg')
 
