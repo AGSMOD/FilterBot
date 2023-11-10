@@ -6,7 +6,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 
 # Retrieve environment variables
 TELEGRAM_BOT_TOKEN = os.environ.get('BOT_TOKEN','6835125869:AAGWrHgrJezV3DZYVHz-JA4izYAIISdHLGc')
-MONGO_URI = os.environ.get('MONGO_URI','mongodb+srv://Gali:Galk@cluster0.qm9j1ag.mongodb.net/?retryWrites=true&w=majority')
+MONGO_URI = os.environ.get('MONGO_URI','mongodb+srv://Alax:Alax@cluster0.sdgwcqk.mongodb.net/?retryWrites=true&w=majority')
 MONGO_NAME = os.environ.get('MONGO_NAME', 'cluster0')
 API_ID = int(os.environ.get('API_ID','20919286'))
 API_HASH = os.environ.get('API_HASH','57b85f72104db3f08f9795b0410eb556')
