@@ -1,6 +1,6 @@
 # bot.py
 import os
-from pymongo import Database
+from database import Database
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, InputFile
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext, CallbackQueryHandler
 
