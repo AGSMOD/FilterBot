@@ -1,18 +1,18 @@
-# bot.py
+l# bot.py
 import os
 from pymongo import MongoClient
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, InputFile
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext, CallbackQueryHandler
 
 # Retrieve environment variables
-TELEGRAM_BOT_TOKEN = os.environ.get('BOT_TOKEN','')
-MONGO_URI = os.environ.get('MONGO_URI','')
-MONGO_NAME = os.environ.get('MONGO_NAME', 'your_default_mongo_name')
-API_ID = int(os.environ.get('API_ID',''))
-API_HASH = os.environ.get('API_HASH','')
-FORCE_SUBSCRIBE = os.environ.get('FORCE_SUBSCRIBE','', False)  # Default to False if not set
-LOG_CHANNEL = os.environ.get('LOG_CHANNEL', 'your_default_log_channel')
-BOT_PIC = os.environ.get('BOT_PIC', 'path/to/your/bot_pic.jpg')
+TELEGRAM_BOT_TOKEN = os.environ.get('BOT_TOKEN','6835125869:AAGWrHgrJezV3DZYVHz-JA4izYAIISdHLGc')
+MONGO_URI = os.environ.get('MONGO_URI','mongodb+srv://Gali:Galk@cluster0.qm9j1ag.mongodb.net/?retryWrites=true&w=majority')
+MONGO_NAME = os.environ.get('MONGO_NAME', 'cluster0')
+API_ID = int(os.environ.get('API_ID','20919286'))
+API_HASH = os.environ.get('API_HASH','57b85f72104db3f08f9795b0410eb556')
+FORCE_SUBSCRIBE = os.environ.get('FORCE_SUBSCRIBE','-1001955533061', True)  # Default to False if not set
+LOG_CHANNEL = os.environ.get('LOG_CHANNEL', '-1002091999754')
+BOT_PIC = os.environ.get('BOT_PIC', 'https://telegra.ph/file/5254eb3ce91431dd02554.jpg')
 
 # Connect to MongoDB
 client = MongoClient(MONGO_URI)
